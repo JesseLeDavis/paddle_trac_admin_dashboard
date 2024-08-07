@@ -1,0 +1,4 @@
+{"hosting": {
+    "site": "paddle-trac-admin",
+    "public": "build/web",
+  "flutter":{"platforms":{"dart":{"lib/firebase_options.dart":{"projectId":"paddle-track","configurations":{"web":"1:950052508715:web:cbee21089e7721dba3c66e"}}}}}}}
