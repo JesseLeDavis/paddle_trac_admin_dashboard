@@ -25,8 +25,12 @@ mixin _$Paddle {
   String get userId => throw _privateConstructorUsedError;
   String? get paddleDescription => throw _privateConstructorUsedError;
 
+  /// Serializes this Paddle to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of Paddle
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $PaddleCopyWith<Paddle> get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -52,6 +56,8 @@ class _$PaddleCopyWithImpl<$Res, $Val extends Paddle>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of Paddle
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -103,6 +109,8 @@ class __$$PaddleImplCopyWithImpl<$Res>
       _$PaddleImpl _value, $Res Function(_$PaddleImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of Paddle
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -173,12 +181,14 @@ class _$PaddleImpl extends _Paddle {
                 other.paddleDescription == paddleDescription));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode =>
       Object.hash(runtimeType, paddleId, paddleName, userId, paddleDescription);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of Paddle
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$PaddleImplCopyWith<_$PaddleImpl> get copyWith =>
@@ -210,8 +220,11 @@ abstract class _Paddle extends Paddle {
   String get userId;
   @override
   String? get paddleDescription;
+
+  /// Create a copy of Paddle
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$PaddleImplCopyWith<_$PaddleImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

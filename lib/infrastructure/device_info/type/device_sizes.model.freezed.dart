@@ -77,8 +77,13 @@ mixin _$MobileSize {
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
+
+  /// Serializes this MobileSize to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of MobileSize
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $MobileSizeCopyWith<MobileSize> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -102,6 +107,8 @@ class _$MobileSizeCopyWithImpl<$Res, $Val extends MobileSize>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of MobileSize
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -145,6 +152,8 @@ class __$$MobileSizeLandscapeImplCopyWithImpl<$Res>
       $Res Function(_$MobileSizeLandscapeImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of MobileSize
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -215,11 +224,13 @@ class _$MobileSizeLandscapeImpl implements _MobileSizeLandscape {
             (identical(other.large, large) || other.large == large));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, small, medium, large);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of MobileSize
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$MobileSizeLandscapeImplCopyWith<_$MobileSizeLandscapeImpl> get copyWith =>
@@ -307,20 +318,22 @@ abstract class _MobileSizeLandscape implements MobileSize {
   factory _MobileSizeLandscape.fromJson(Map<String, dynamic> json) =
       _$MobileSizeLandscapeImpl.fromJson;
 
-  @override
-
   /// Maximum size of small mobile phone
-  double get small;
   @override
+  double get small;
 
   /// Maximum size of middle mobile phone
-  double get medium;
   @override
+  double get medium;
 
   /// Maximum size of large mobile phone
-  double get large;
   @override
-  @JsonKey(ignore: true)
+  double get large;
+
+  /// Create a copy of MobileSize
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$MobileSizeLandscapeImplCopyWith<_$MobileSizeLandscapeImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -344,6 +357,8 @@ class __$$MobileSizePortraitImplCopyWithImpl<$Res>
       $Res Function(_$MobileSizePortraitImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of MobileSize
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -414,11 +429,13 @@ class _$MobileSizePortraitImpl implements _MobileSizePortrait {
             (identical(other.large, large) || other.large == large));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, small, medium, large);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of MobileSize
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$MobileSizePortraitImplCopyWith<_$MobileSizePortraitImpl> get copyWith =>
@@ -506,20 +523,22 @@ abstract class _MobileSizePortrait implements MobileSize {
   factory _MobileSizePortrait.fromJson(Map<String, dynamic> json) =
       _$MobileSizePortraitImpl.fromJson;
 
-  @override
-
   /// Maximum size of small mobile phone
-  double get small;
   @override
+  double get small;
 
   /// Maximum size of middle mobile phone
-  double get medium;
   @override
+  double get medium;
 
   /// Maximum size of large mobile phone
-  double get large;
   @override
-  @JsonKey(ignore: true)
+  double get large;
+
+  /// Create a copy of MobileSize
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$MobileSizePortraitImplCopyWith<_$MobileSizePortraitImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -582,8 +601,13 @@ mixin _$TabletSize {
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
+
+  /// Serializes this TabletSize to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of TabletSize
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $TabletSizeCopyWith<TabletSize> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -607,6 +631,8 @@ class _$TabletSizeCopyWithImpl<$Res, $Val extends TabletSize>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of TabletSize
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -645,6 +671,8 @@ class __$$TabletSizeLandscapeImplCopyWithImpl<$Res>
       $Res Function(_$TabletSizeLandscapeImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of TabletSize
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -701,11 +729,13 @@ class _$TabletSizeLandscapeImpl implements _TabletSizeLandscape {
             (identical(other.large, large) || other.large == large));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, small, large);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of TabletSize
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$TabletSizeLandscapeImplCopyWith<_$TabletSizeLandscapeImpl> get copyWith =>
@@ -789,16 +819,18 @@ abstract class _TabletSizeLandscape implements TabletSize {
   factory _TabletSizeLandscape.fromJson(Map<String, dynamic> json) =
       _$TabletSizeLandscapeImpl.fromJson;
 
-  @override
-
   /// Maximum size of small tablet
-  double get small;
   @override
+  double get small;
 
   /// Maximum size of large tablet
-  double get large;
   @override
-  @JsonKey(ignore: true)
+  double get large;
+
+  /// Create a copy of TabletSize
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$TabletSizeLandscapeImplCopyWith<_$TabletSizeLandscapeImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -822,6 +854,8 @@ class __$$TabletSizePortraitImplCopyWithImpl<$Res>
       $Res Function(_$TabletSizePortraitImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of TabletSize
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -878,11 +912,13 @@ class _$TabletSizePortraitImpl implements _TabletSizePortrait {
             (identical(other.large, large) || other.large == large));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, small, large);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of TabletSize
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$TabletSizePortraitImplCopyWith<_$TabletSizePortraitImpl> get copyWith =>
@@ -966,16 +1002,18 @@ abstract class _TabletSizePortrait implements TabletSize {
   factory _TabletSizePortrait.fromJson(Map<String, dynamic> json) =
       _$TabletSizePortraitImpl.fromJson;
 
-  @override
-
   /// Maximum size of small tablet
-  double get small;
   @override
+  double get small;
 
   /// Maximum size of large tablet
-  double get large;
   @override
-  @JsonKey(ignore: true)
+  double get large;
+
+  /// Create a copy of TabletSize
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$TabletSizePortraitImplCopyWith<_$TabletSizePortraitImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -989,8 +1027,12 @@ mixin _$WatchSize {
   /// Maximum size of small mobile phone
   double get medium => throw _privateConstructorUsedError;
 
+  /// Serializes this WatchSize to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of WatchSize
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $WatchSizeCopyWith<WatchSize> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1013,6 +1055,8 @@ class _$WatchSizeCopyWithImpl<$Res, $Val extends WatchSize>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of WatchSize
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1046,6 +1090,8 @@ class __$$WatchSizeLandscapeImplCopyWithImpl<$Res>
       $Res Function(_$WatchSizeLandscapeImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of WatchSize
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1086,11 +1132,13 @@ class _$WatchSizeLandscapeImpl implements _WatchSizeLandscape {
             (identical(other.medium, medium) || other.medium == medium));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, medium);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of WatchSize
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$WatchSizeLandscapeImplCopyWith<_$WatchSizeLandscapeImpl> get copyWith =>
@@ -1112,12 +1160,14 @@ abstract class _WatchSizeLandscape implements WatchSize {
   factory _WatchSizeLandscape.fromJson(Map<String, dynamic> json) =
       _$WatchSizeLandscapeImpl.fromJson;
 
-  @override
-
   /// Maximum size of small mobile phone
-  double get medium;
   @override
-  @JsonKey(ignore: true)
+  double get medium;
+
+  /// Create a copy of WatchSize
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$WatchSizeLandscapeImplCopyWith<_$WatchSizeLandscapeImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

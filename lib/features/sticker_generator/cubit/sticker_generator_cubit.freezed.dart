@@ -3,7 +3,7 @@
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
-part of 'settings_cubit.dart';
+part of 'sticker_generator_cubit.dart';
 
 // **************************************************************************
 // FreezedGenerator
@@ -15,7 +15,7 @@ final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
-mixin _$SettingsState {
+mixin _$StickerGeneratorState {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
@@ -51,23 +51,24 @@ mixin _$SettingsState {
 }
 
 /// @nodoc
-abstract class $SettingsStateCopyWith<$Res> {
-  factory $SettingsStateCopyWith(
-          SettingsState value, $Res Function(SettingsState) then) =
-      _$SettingsStateCopyWithImpl<$Res, SettingsState>;
+abstract class $StickerGeneratorStateCopyWith<$Res> {
+  factory $StickerGeneratorStateCopyWith(StickerGeneratorState value,
+          $Res Function(StickerGeneratorState) then) =
+      _$StickerGeneratorStateCopyWithImpl<$Res, StickerGeneratorState>;
 }
 
 /// @nodoc
-class _$SettingsStateCopyWithImpl<$Res, $Val extends SettingsState>
-    implements $SettingsStateCopyWith<$Res> {
-  _$SettingsStateCopyWithImpl(this._value, this._then);
+class _$StickerGeneratorStateCopyWithImpl<$Res,
+        $Val extends StickerGeneratorState>
+    implements $StickerGeneratorStateCopyWith<$Res> {
+  _$StickerGeneratorStateCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of SettingsState
+  /// Create a copy of StickerGeneratorState
   /// with the given fields replaced by the non-null parameter values.
 }
 
@@ -80,13 +81,13 @@ abstract class _$$InitialImplCopyWith<$Res> {
 
 /// @nodoc
 class __$$InitialImplCopyWithImpl<$Res>
-    extends _$SettingsStateCopyWithImpl<$Res, _$InitialImpl>
+    extends _$StickerGeneratorStateCopyWithImpl<$Res, _$InitialImpl>
     implements _$$InitialImplCopyWith<$Res> {
   __$$InitialImplCopyWithImpl(
       _$InitialImpl _value, $Res Function(_$InitialImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of SettingsState
+  /// Create a copy of StickerGeneratorState
   /// with the given fields replaced by the non-null parameter values.
 }
 
@@ -97,7 +98,7 @@ class _$InitialImpl implements _Initial {
 
   @override
   String toString() {
-    return 'SettingsState.initial()';
+    return 'StickerGeneratorState.initial()';
   }
 
   @override
@@ -166,6 +167,6 @@ class _$InitialImpl implements _Initial {
   }
 }
 
-abstract class _Initial implements SettingsState {
+abstract class _Initial implements StickerGeneratorState {
   const factory _Initial() = _$InitialImpl;
 }

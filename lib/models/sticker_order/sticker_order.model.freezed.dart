@@ -33,8 +33,12 @@ mixin _$StickerOrder {
   @JsonKey(toJson: _addressToJson)
   Address? get shippingAddress => throw _privateConstructorUsedError;
 
+  /// Serializes this StickerOrder to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of StickerOrder
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $StickerOrderCopyWith<StickerOrder> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -71,6 +75,8 @@ class _$StickerOrderCopyWithImpl<$Res, $Val extends StickerOrder>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of StickerOrder
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -134,6 +140,8 @@ class _$StickerOrderCopyWithImpl<$Res, $Val extends StickerOrder>
     ) as $Val);
   }
 
+  /// Create a copy of StickerOrder
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $AddressCopyWith<$Res>? get shippingAddress {
@@ -180,6 +188,8 @@ class __$$StickerOrderImplCopyWithImpl<$Res>
       _$StickerOrderImpl _value, $Res Function(_$StickerOrderImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of StickerOrder
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -320,7 +330,7 @@ class _$StickerOrderImpl extends _StickerOrder {
                 other.shippingAddress == shippingAddress));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -336,7 +346,9 @@ class _$StickerOrderImpl extends _StickerOrder {
       orderNumber,
       shippingAddress);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of StickerOrder
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$StickerOrderImplCopyWith<_$StickerOrderImpl> get copyWith =>
@@ -392,8 +404,11 @@ abstract class _StickerOrder extends StickerOrder {
   @override
   @JsonKey(toJson: _addressToJson)
   Address? get shippingAddress;
+
+  /// Create a copy of StickerOrder
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$StickerOrderImplCopyWith<_$StickerOrderImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

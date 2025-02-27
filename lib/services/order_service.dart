@@ -97,7 +97,7 @@ class OrderService with FirebaseAuthServerMixin implements IOrderService {
         'addressState': addressState,
         'addressZip': addressZip,
         'orderName': orderName,
-        'orderEmail': 'carlos@theogk.com',
+        'orderEmail': orderEmail,
       };
 
       return serverResponse(

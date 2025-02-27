@@ -7,6 +7,7 @@ import 'package:paddle_trac_admin_dashboard/features/home_page/cubit/cubit/home_
 import 'package:paddle_trac_admin_dashboard/features/orders/orders_page.dart';
 import 'package:paddle_trac_admin_dashboard/features/profile_page/profile_page.dart';
 import 'package:paddle_trac_admin_dashboard/features/settings/setting_page.dart';
+import 'package:paddle_trac_admin_dashboard/features/sticker_generator/sticker_generator_page.dart';
 import 'package:paddle_trac_admin_dashboard/gen/assets.gen.dart';
 import 'package:paddle_trac_admin_dashboard/infrastructure/injection/injection.dart';
 import 'package:paddle_trac_admin_dashboard/shared/themes/color_themes.dart';
@@ -42,6 +43,8 @@ class HomePageView extends StatelessWidget {
                 return state.maybeMap(
                   orElse: CircularProgressIndicator.new,
                   loaded: (loaded) {
+                    final isQrPage =
+                        loaded.dashboardPageState == DashboardPageState.qr;
                     return Padding(
                       padding: const EdgeInsets.all(24),
                       child: Column(
@@ -99,6 +102,23 @@ class HomePageView extends StatelessWidget {
                                               );
                                         },
                                       ),
+                                      gapH24,
+                                      // IconButton(
+                                      //   icon: Icon(
+                                      //     color: isQrPage
+                                      //         ? ColorThemes.primary
+                                      //         : ColorThemes.lightGrey,
+                                      //     size: 30,
+                                      //     Icons.qr_code_scanner_rounded,
+                                      //   ),
+                                      //   onPressed: () {
+                                      //     context
+                                      //         .read<HomePageCubit>()
+                                      //         .changePage(
+                                      //           DashboardPageState.qr,
+                                      //         );
+                                      //   },
+                                      // ),
                                       const Spacer(),
                                       IconButton(
                                         icon: const Icon(
@@ -147,6 +167,8 @@ class HomePageView extends StatelessWidget {
         return const ProfilePage();
       case DashboardPageState.settings:
         return const SetttingsPage();
+      case DashboardPageState.qr:
+        return const StickerGeneratorPage();
     }
   }
 }

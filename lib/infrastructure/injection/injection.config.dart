@@ -8,58 +8,62 @@
 // coverage:ignore-file
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
-import 'package:get_it/get_it.dart' as _i1;
-import 'package:injectable/injectable.dart' as _i2;
-import 'package:local_auth/local_auth.dart' as _i7;
+import 'package:get_it/get_it.dart' as _i174;
+import 'package:injectable/injectable.dart' as _i526;
+import 'package:local_auth/local_auth.dart' as _i152;
 import 'package:paddle_trac_admin_dashboard/collections/admin_sticker_orders_collection.dart'
-    as _i8;
+    as _i273;
 import 'package:paddle_trac_admin_dashboard/features/home_page/cubit/cubit/home_page_cubit.dart'
-    as _i4;
+    as _i815;
 import 'package:paddle_trac_admin_dashboard/features/orders/cubit/orders_cubit.dart'
-    as _i12;
+    as _i908;
 import 'package:paddle_trac_admin_dashboard/features/profile_page/cubit/profile_page_cubit.dart'
-    as _i3;
+    as _i812;
 import 'package:paddle_trac_admin_dashboard/features/sign_in/cubit/sign_in_cubit.dart'
-    as _i5;
+    as _i645;
+import 'package:paddle_trac_admin_dashboard/features/sticker_generator/cubit/sticker_generator_cubit.dart'
+    as _i208;
 import 'package:paddle_trac_admin_dashboard/infrastructure/injection/injection_module.dart'
-    as _i13;
+    as _i632;
 import 'package:paddle_trac_admin_dashboard/infrastructure/secure_local_storage/lsecure_local_storage.dart'
-    as _i10;
-import 'package:paddle_trac_admin_dashboard/routes/router.dart' as _i9;
+    as _i412;
+import 'package:paddle_trac_admin_dashboard/routes/router.dart' as _i512;
 import 'package:paddle_trac_admin_dashboard/services/order_service.dart'
-    as _i11;
-import 'package:shared_preferences/shared_preferences.dart' as _i6;
+    as _i624;
+import 'package:shared_preferences/shared_preferences.dart' as _i460;
 
-extension GetItInjectableX on _i1.GetIt {
+extension GetItInjectableX on _i174.GetIt {
 // initializes the registration of main-scope dependencies inside of GetIt
-  _i1.GetIt init({
+  _i174.GetIt init({
     String? environment,
-    _i2.EnvironmentFilter? environmentFilter,
+    _i526.EnvironmentFilter? environmentFilter,
   }) {
-    final gh = _i2.GetItHelper(
+    final gh = _i526.GetItHelper(
       this,
       environment,
       environmentFilter,
     );
     final injectionModule = _$InjectionModule();
-    gh.factory<_i3.ProfilePageCubit>(() => _i3.ProfilePageCubit());
-    gh.factory<_i4.HomePageCubit>(() => _i4.HomePageCubit());
-    gh.factory<_i5.SignInCubit>(() => _i5.SignInCubit());
-    gh.factoryAsync<_i6.SharedPreferences>(() => injectionModule.prefs);
-    gh.factory<_i7.LocalAuthentication>(
+    gh.factory<_i812.ProfilePageCubit>(() => _i812.ProfilePageCubit());
+    gh.factory<_i815.HomePageCubit>(() => _i815.HomePageCubit());
+    gh.factory<_i208.StickerGeneratorCubit>(
+        () => _i208.StickerGeneratorCubit());
+    gh.factory<_i645.SignInCubit>(() => _i645.SignInCubit());
+    gh.factoryAsync<_i460.SharedPreferences>(() => injectionModule.prefs);
+    gh.factory<_i152.LocalAuthentication>(
         () => injectionModule.localAuthentication);
-    gh.factory<_i8.AdminStickerOrderCollection>(
-        () => _i8.AdminStickerOrderCollection());
-    gh.factory<_i9.AppRouter>(() => _i9.AppRouter());
-    gh.singleton<_i10.SecureLocalStorage>(() => _i10.SecureLocalStorage());
-    gh.singleton<_i11.IOrderService>(
-      () => _i11.OrderService(gh<_i8.AdminStickerOrderCollection>()),
+    gh.factory<_i273.AdminStickerOrderCollection>(
+        () => _i273.AdminStickerOrderCollection());
+    gh.factory<_i512.AppRouter>(() => _i512.AppRouter());
+    gh.singleton<_i412.SecureLocalStorage>(() => _i412.SecureLocalStorage());
+    gh.singleton<_i624.IOrderService>(
+      () => _i624.OrderService(gh<_i273.AdminStickerOrderCollection>()),
       instanceName: 'OrderService',
     );
-    gh.factory<_i12.OrdersPageCubit>(() => _i12.OrdersPageCubit(
-        gh<_i11.IOrderService>(instanceName: 'OrderService')));
+    gh.factory<_i908.OrdersPageCubit>(() => _i908.OrdersPageCubit(
+        gh<_i624.IOrderService>(instanceName: 'OrderService')));
     return this;
   }
 }
 
-class _$InjectionModule extends _i13.InjectionModule {}
+class _$InjectionModule extends _i632.InjectionModule {}

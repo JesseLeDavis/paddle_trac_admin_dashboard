@@ -23,8 +23,12 @@ mixin _$Uuid {
   String get uuid => throw _privateConstructorUsedError;
   bool get isAssigned => throw _privateConstructorUsedError;
 
+  /// Serializes this Uuid to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of Uuid
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $UuidCopyWith<Uuid> get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -46,6 +50,8 @@ class _$UuidCopyWithImpl<$Res, $Val extends Uuid>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of Uuid
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -82,6 +88,8 @@ class __$$UuidImplCopyWithImpl<$Res>
   __$$UuidImplCopyWithImpl(_$UuidImpl _value, $Res Function(_$UuidImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of Uuid
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -129,11 +137,13 @@ class _$UuidImpl extends _Uuid {
                 other.isAssigned == isAssigned));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, uuid, isAssigned);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of Uuid
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$UuidImplCopyWith<_$UuidImpl> get copyWith =>
@@ -159,8 +169,11 @@ abstract class _Uuid extends Uuid {
   String get uuid;
   @override
   bool get isAssigned;
+
+  /// Create a copy of Uuid
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$UuidImplCopyWith<_$UuidImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
