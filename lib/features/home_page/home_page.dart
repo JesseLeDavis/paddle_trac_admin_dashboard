@@ -1,8 +1,7 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:paddle_trac_admin_dashboard/constants/sizes.dart';
+import 'package:paddle_trac_admin_dashboard/features/court_update_page/court_update_page.dart';
 import 'package:paddle_trac_admin_dashboard/features/home_page/cubit/cubit/home_page_cubit.dart';
 import 'package:paddle_trac_admin_dashboard/features/orders/orders_page.dart';
 import 'package:paddle_trac_admin_dashboard/features/profile_page/profile_page.dart';
@@ -103,22 +102,23 @@ class HomePageView extends StatelessWidget {
                                         },
                                       ),
                                       gapH24,
-                                      // IconButton(
-                                      //   icon: Icon(
-                                      //     color: isQrPage
-                                      //         ? ColorThemes.primary
-                                      //         : ColorThemes.lightGrey,
-                                      //     size: 30,
-                                      //     Icons.qr_code_scanner_rounded,
-                                      //   ),
-                                      //   onPressed: () {
-                                      //     context
-                                      //         .read<HomePageCubit>()
-                                      //         .changePage(
-                                      //           DashboardPageState.qr,
-                                      //         );
-                                      //   },
-                                      // ),
+                                      IconButton(
+                                        icon: Icon(
+                                          color: isQrPage
+                                              ? ColorThemes.primary
+                                              : ColorThemes.lightGrey,
+                                          size: 30,
+                                          Icons.qr_code_scanner_rounded,
+                                        ),
+                                        onPressed: () {
+                                          context
+                                              .read<HomePageCubit>()
+                                              .changePage(
+                                                DashboardPageState
+                                                    .courtUpdateRequest,
+                                              );
+                                        },
+                                      ),
                                       const Spacer(),
                                       IconButton(
                                         icon: const Icon(
@@ -169,6 +169,8 @@ class HomePageView extends StatelessWidget {
         return const SetttingsPage();
       case DashboardPageState.qr:
         return const StickerGeneratorPage();
+      case DashboardPageState.courtUpdateRequest:
+        return const CourtUpdatePage();
     }
   }
 }
