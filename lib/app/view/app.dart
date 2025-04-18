@@ -138,8 +138,8 @@ extension ThemeX on BuildContext {
   Color get tertiaryColor => colorScheme.tertiary;
   Color get primaryTextColor => colorScheme.onPrimary;
   Color get secondaryTextColor => colorScheme.onSecondary;
-  Color get lightColor => colorScheme.background;
-  Color get lightTextColor => colorScheme.onBackground;
+  Color get lightColor => colorScheme.surface;
+  Color get lightTextColor => colorScheme.onSurface;
   Color get darkColor => colorScheme.surface;
   Color get darkTextColor => colorScheme.onSurface;
   Color get errorColor => colorScheme.error;

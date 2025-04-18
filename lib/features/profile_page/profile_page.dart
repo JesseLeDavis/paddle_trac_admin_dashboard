@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:paddle_trac_admin_dashboard/features/profile_page/cubit/profile_page_cubit.dart';
 import 'package:paddle_trac_admin_dashboard/infrastructure/injection/injection.dart';
-import 'package:paddle_trac_admin_dashboard/shared/themes/color_themes.dart';
 
 class ProfilePage extends StatelessWidget {
   const ProfilePage({super.key});

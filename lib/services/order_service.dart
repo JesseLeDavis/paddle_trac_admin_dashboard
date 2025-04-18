@@ -1,5 +1,5 @@
 // Package imports:
-import 'package:dartz/dartz.dart';
+// ignore_for_file: override_on_non_overriding_member
 import 'package:firefuel/firefuel.dart';
 import 'package:injectable/injectable.dart';
 import 'package:intl/intl.dart';

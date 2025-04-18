@@ -48,6 +48,7 @@ class _OrderStatusButtonState extends State<OrderStatusButton> {
                     decoration: BoxDecoration(
                       boxShadow: [
                         BoxShadow(
+                          // ignore: deprecated_member_use
                           color: Colors.grey.withOpacity(0.5),
                           offset: const Offset(
                             6,

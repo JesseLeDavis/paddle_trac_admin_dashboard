@@ -50,6 +50,7 @@ class _SignInVIewState extends State<SignInVIew> {
           child: Column(
             mainAxisSize: MainAxisSize.min,
             children: [
+              // ignore: deprecated_member_use_from_same_package
               Assets.icons.paddleLogo.svg(color: ColorThemes.courtGreen),
               gapH4,
               Text(
@@ -99,7 +100,7 @@ class _SignInVIewState extends State<SignInVIew> {
                     foregroundColor: Colors.white,
                   ),
                   onPressed: () {
-                    context.read<SignInCubit>().SignIn(context);
+                    context.read<SignInCubit>().signIn(context);
                   },
                   child: const Text('Log In'),
                 ),

@@ -1,4 +1,3 @@
-import 'package:dartz/dartz_unsafe.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -6,7 +5,6 @@ import 'package:intl/intl.dart';
 import 'package:paddle_trac_admin_dashboard/app/view/app.dart';
 import 'package:paddle_trac_admin_dashboard/collections/partner_buissness.dart';
 import 'package:paddle_trac_admin_dashboard/constants/sizes.dart';
-import 'package:paddle_trac_admin_dashboard/features/profile_page/profile_page.dart';
 import 'package:paddle_trac_admin_dashboard/features/sticker_generator/cubit/sticker_generator_cubit.dart';
 import 'package:paddle_trac_admin_dashboard/infrastructure/injection/injection.dart';
 import 'package:paddle_trac_admin_dashboard/shared/themes/color_themes.dart';
@@ -152,6 +150,7 @@ class _StickerGeneratorViewState extends State<StickerGeneratorView> {
     );
   }
 
+  // ignore: unused_element
   Future<bool> _showConfirmationDialog(
     BuildContext context,
     PartnerBusiness selectedBuisness,

@@ -5,5 +5,5 @@ part 'settings_state.dart';
 part 'settings_cubit.freezed.dart';
 
 class SettingsCubit extends Cubit<SettingsState> {
-  SettingsCubit() : super(SettingsState.initial());
+  SettingsCubit() : super(const SettingsState.initial());
 }

@@ -37,6 +37,7 @@ class SettingsView extends StatelessWidget {
               onPressed: () async {
                 await FirebaseAuth.instance
                     .signOut()
+                    // ignore: use_build_context_synchronously
                     .then((value) => context.goNamed(signInPath));
               },
               child: const Text('Sign Out'),

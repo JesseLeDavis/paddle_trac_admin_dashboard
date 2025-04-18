@@ -1,5 +1,3 @@
-import 'dart:convert';
-import 'dart:io';
 
 import 'package:bloc/bloc.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
@@ -27,7 +25,6 @@ class ProfilePageCubit extends Cubit<ProfilePageState> {
     for (final row in csvData) {
       // Ensure each row is processed correctly
       if (row.isEmpty) {
-        print('Empty row encountered, skipping.');
         continue;
       }
 
@@ -35,7 +32,6 @@ class ProfilePageCubit extends Cubit<ProfilePageState> {
       final uuid = row[0].toString().trim();
 
       if (uuid.length > 1500) {
-        print('Error: UUID $uuid is longer than 1500 bytes.');
         continue;
       }
 
@@ -45,12 +41,8 @@ class ProfilePageCubit extends Cubit<ProfilePageState> {
           'isAssigned': false,
           'uuid': uuid,
         });
-        print('Added document $uuid successfully.');
-      } catch (e) {
-        print('Error adding document $uuid: $e');
-      }
+        // ignore: empty_catches
+      } catch (e) {}
     }
-
-    print('All UUIDs have been processed.');
   }
 }

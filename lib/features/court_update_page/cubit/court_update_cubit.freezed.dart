@@ -20,24 +20,42 @@ mixin _$CourtUpdateState {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
-    required TResult Function(List<CourtUpdateRequest> requests) loaded,
     required TResult Function(String message) error,
+    required TResult Function(
+            List<CourtUpdateRequest> requests,
+            CourtUpdateRequest? selectedRequest,
+            Court? selectedCourt,
+            ApiError? courtLoadError,
+            bool isCourtLoading)
+        loaded,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
-    TResult? Function(List<CourtUpdateRequest> requests)? loaded,
     TResult? Function(String message)? error,
+    TResult? Function(
+            List<CourtUpdateRequest> requests,
+            CourtUpdateRequest? selectedRequest,
+            Court? selectedCourt,
+            ApiError? courtLoadError,
+            bool isCourtLoading)?
+        loaded,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
-    TResult Function(List<CourtUpdateRequest> requests)? loaded,
     TResult Function(String message)? error,
+    TResult Function(
+            List<CourtUpdateRequest> requests,
+            CourtUpdateRequest? selectedRequest,
+            Court? selectedCourt,
+            ApiError? courtLoadError,
+            bool isCourtLoading)?
+        loaded,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -45,24 +63,24 @@ mixin _$CourtUpdateState {
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial value) initial,
     required TResult Function(_Loading value) loading,
-    required TResult Function(_Loaded value) loaded,
     required TResult Function(_Error value) error,
+    required TResult Function(_Loaded value) loaded,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial value)? initial,
     TResult? Function(_Loading value)? loading,
-    TResult? Function(_Loaded value)? loaded,
     TResult? Function(_Error value)? error,
+    TResult? Function(_Loaded value)? loaded,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
     TResult Function(_Loading value)? loading,
-    TResult Function(_Loaded value)? loaded,
     TResult Function(_Error value)? error,
+    TResult Function(_Loaded value)? loaded,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -132,8 +150,14 @@ class _$InitialImpl implements _Initial {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
-    required TResult Function(List<CourtUpdateRequest> requests) loaded,
     required TResult Function(String message) error,
+    required TResult Function(
+            List<CourtUpdateRequest> requests,
+            CourtUpdateRequest? selectedRequest,
+            Court? selectedCourt,
+            ApiError? courtLoadError,
+            bool isCourtLoading)
+        loaded,
   }) {
     return initial();
   }
@@ -143,8 +167,14 @@ class _$InitialImpl implements _Initial {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
-    TResult? Function(List<CourtUpdateRequest> requests)? loaded,
     TResult? Function(String message)? error,
+    TResult? Function(
+            List<CourtUpdateRequest> requests,
+            CourtUpdateRequest? selectedRequest,
+            Court? selectedCourt,
+            ApiError? courtLoadError,
+            bool isCourtLoading)?
+        loaded,
   }) {
     return initial?.call();
   }
@@ -154,8 +184,14 @@ class _$InitialImpl implements _Initial {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
-    TResult Function(List<CourtUpdateRequest> requests)? loaded,
     TResult Function(String message)? error,
+    TResult Function(
+            List<CourtUpdateRequest> requests,
+            CourtUpdateRequest? selectedRequest,
+            Court? selectedCourt,
+            ApiError? courtLoadError,
+            bool isCourtLoading)?
+        loaded,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -169,8 +205,8 @@ class _$InitialImpl implements _Initial {
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial value) initial,
     required TResult Function(_Loading value) loading,
-    required TResult Function(_Loaded value) loaded,
     required TResult Function(_Error value) error,
+    required TResult Function(_Loaded value) loaded,
   }) {
     return initial(this);
   }
@@ -180,8 +216,8 @@ class _$InitialImpl implements _Initial {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial value)? initial,
     TResult? Function(_Loading value)? loading,
-    TResult? Function(_Loaded value)? loaded,
     TResult? Function(_Error value)? error,
+    TResult? Function(_Loaded value)? loaded,
   }) {
     return initial?.call(this);
   }
@@ -191,8 +227,8 @@ class _$InitialImpl implements _Initial {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
     TResult Function(_Loading value)? loading,
-    TResult Function(_Loaded value)? loaded,
     TResult Function(_Error value)? error,
+    TResult Function(_Loaded value)? loaded,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -249,8 +285,14 @@ class _$LoadingImpl implements _Loading {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
-    required TResult Function(List<CourtUpdateRequest> requests) loaded,
     required TResult Function(String message) error,
+    required TResult Function(
+            List<CourtUpdateRequest> requests,
+            CourtUpdateRequest? selectedRequest,
+            Court? selectedCourt,
+            ApiError? courtLoadError,
+            bool isCourtLoading)
+        loaded,
   }) {
     return loading();
   }
@@ -260,8 +302,14 @@ class _$LoadingImpl implements _Loading {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
-    TResult? Function(List<CourtUpdateRequest> requests)? loaded,
     TResult? Function(String message)? error,
+    TResult? Function(
+            List<CourtUpdateRequest> requests,
+            CourtUpdateRequest? selectedRequest,
+            Court? selectedCourt,
+            ApiError? courtLoadError,
+            bool isCourtLoading)?
+        loaded,
   }) {
     return loading?.call();
   }
@@ -271,8 +319,14 @@ class _$LoadingImpl implements _Loading {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
-    TResult Function(List<CourtUpdateRequest> requests)? loaded,
     TResult Function(String message)? error,
+    TResult Function(
+            List<CourtUpdateRequest> requests,
+            CourtUpdateRequest? selectedRequest,
+            Court? selectedCourt,
+            ApiError? courtLoadError,
+            bool isCourtLoading)?
+        loaded,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -286,8 +340,8 @@ class _$LoadingImpl implements _Loading {
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial value) initial,
     required TResult Function(_Loading value) loading,
-    required TResult Function(_Loaded value) loaded,
     required TResult Function(_Error value) error,
+    required TResult Function(_Loaded value) loaded,
   }) {
     return loading(this);
   }
@@ -297,8 +351,8 @@ class _$LoadingImpl implements _Loading {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial value)? initial,
     TResult? Function(_Loading value)? loading,
-    TResult? Function(_Loaded value)? loaded,
     TResult? Function(_Error value)? error,
+    TResult? Function(_Loaded value)? loaded,
   }) {
     return loading?.call(this);
   }
@@ -308,8 +362,8 @@ class _$LoadingImpl implements _Loading {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
     TResult Function(_Loading value)? loading,
-    TResult Function(_Loaded value)? loaded,
     TResult Function(_Error value)? error,
+    TResult Function(_Loaded value)? loaded,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -321,166 +375,6 @@ class _$LoadingImpl implements _Loading {
 
 abstract class _Loading implements CourtUpdateState {
   const factory _Loading() = _$LoadingImpl;
-}
-
-/// @nodoc
-abstract class _$$LoadedImplCopyWith<$Res> {
-  factory _$$LoadedImplCopyWith(
-          _$LoadedImpl value, $Res Function(_$LoadedImpl) then) =
-      __$$LoadedImplCopyWithImpl<$Res>;
-  @useResult
-  $Res call({List<CourtUpdateRequest> requests});
-}
-
-/// @nodoc
-class __$$LoadedImplCopyWithImpl<$Res>
-    extends _$CourtUpdateStateCopyWithImpl<$Res, _$LoadedImpl>
-    implements _$$LoadedImplCopyWith<$Res> {
-  __$$LoadedImplCopyWithImpl(
-      _$LoadedImpl _value, $Res Function(_$LoadedImpl) _then)
-      : super(_value, _then);
-
-  /// Create a copy of CourtUpdateState
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? requests = null,
-  }) {
-    return _then(_$LoadedImpl(
-      requests: null == requests
-          ? _value._requests
-          : requests // ignore: cast_nullable_to_non_nullable
-              as List<CourtUpdateRequest>,
-    ));
-  }
-}
-
-/// @nodoc
-
-class _$LoadedImpl implements _Loaded {
-  const _$LoadedImpl({required final List<CourtUpdateRequest> requests})
-      : _requests = requests;
-
-  final List<CourtUpdateRequest> _requests;
-  @override
-  List<CourtUpdateRequest> get requests {
-    if (_requests is EqualUnmodifiableListView) return _requests;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_requests);
-  }
-
-  @override
-  String toString() {
-    return 'CourtUpdateState.loaded(requests: $requests)';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$LoadedImpl &&
-            const DeepCollectionEquality().equals(other._requests, _requests));
-  }
-
-  @override
-  int get hashCode =>
-      Object.hash(runtimeType, const DeepCollectionEquality().hash(_requests));
-
-  /// Create a copy of CourtUpdateState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$LoadedImplCopyWith<_$LoadedImpl> get copyWith =>
-      __$$LoadedImplCopyWithImpl<_$LoadedImpl>(this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() initial,
-    required TResult Function() loading,
-    required TResult Function(List<CourtUpdateRequest> requests) loaded,
-    required TResult Function(String message) error,
-  }) {
-    return loaded(requests);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initial,
-    TResult? Function()? loading,
-    TResult? Function(List<CourtUpdateRequest> requests)? loaded,
-    TResult? Function(String message)? error,
-  }) {
-    return loaded?.call(requests);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? loading,
-    TResult Function(List<CourtUpdateRequest> requests)? loaded,
-    TResult Function(String message)? error,
-    required TResult orElse(),
-  }) {
-    if (loaded != null) {
-      return loaded(requests);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_Initial value) initial,
-    required TResult Function(_Loading value) loading,
-    required TResult Function(_Loaded value) loaded,
-    required TResult Function(_Error value) error,
-  }) {
-    return loaded(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Initial value)? initial,
-    TResult? Function(_Loading value)? loading,
-    TResult? Function(_Loaded value)? loaded,
-    TResult? Function(_Error value)? error,
-  }) {
-    return loaded?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    TResult Function(_Loading value)? loading,
-    TResult Function(_Loaded value)? loaded,
-    TResult Function(_Error value)? error,
-    required TResult orElse(),
-  }) {
-    if (loaded != null) {
-      return loaded(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class _Loaded implements CourtUpdateState {
-  const factory _Loaded({required final List<CourtUpdateRequest> requests}) =
-      _$LoadedImpl;
-
-  List<CourtUpdateRequest> get requests;
-
-  /// Create a copy of CourtUpdateState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$LoadedImplCopyWith<_$LoadedImpl> get copyWith =>
-      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -553,8 +447,14 @@ class _$ErrorImpl implements _Error {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
-    required TResult Function(List<CourtUpdateRequest> requests) loaded,
     required TResult Function(String message) error,
+    required TResult Function(
+            List<CourtUpdateRequest> requests,
+            CourtUpdateRequest? selectedRequest,
+            Court? selectedCourt,
+            ApiError? courtLoadError,
+            bool isCourtLoading)
+        loaded,
   }) {
     return error(message);
   }
@@ -564,8 +464,14 @@ class _$ErrorImpl implements _Error {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
-    TResult? Function(List<CourtUpdateRequest> requests)? loaded,
     TResult? Function(String message)? error,
+    TResult? Function(
+            List<CourtUpdateRequest> requests,
+            CourtUpdateRequest? selectedRequest,
+            Court? selectedCourt,
+            ApiError? courtLoadError,
+            bool isCourtLoading)?
+        loaded,
   }) {
     return error?.call(message);
   }
@@ -575,8 +481,14 @@ class _$ErrorImpl implements _Error {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
-    TResult Function(List<CourtUpdateRequest> requests)? loaded,
     TResult Function(String message)? error,
+    TResult Function(
+            List<CourtUpdateRequest> requests,
+            CourtUpdateRequest? selectedRequest,
+            Court? selectedCourt,
+            ApiError? courtLoadError,
+            bool isCourtLoading)?
+        loaded,
     required TResult orElse(),
   }) {
     if (error != null) {
@@ -590,8 +502,8 @@ class _$ErrorImpl implements _Error {
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial value) initial,
     required TResult Function(_Loading value) loading,
-    required TResult Function(_Loaded value) loaded,
     required TResult Function(_Error value) error,
+    required TResult Function(_Loaded value) loaded,
   }) {
     return error(this);
   }
@@ -601,8 +513,8 @@ class _$ErrorImpl implements _Error {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial value)? initial,
     TResult? Function(_Loading value)? loading,
-    TResult? Function(_Loaded value)? loaded,
     TResult? Function(_Error value)? error,
+    TResult? Function(_Loaded value)? loaded,
   }) {
     return error?.call(this);
   }
@@ -612,8 +524,8 @@ class _$ErrorImpl implements _Error {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
     TResult Function(_Loading value)? loading,
-    TResult Function(_Loaded value)? loaded,
     TResult Function(_Error value)? error,
+    TResult Function(_Loaded value)? loaded,
     required TResult orElse(),
   }) {
     if (error != null) {
@@ -632,5 +544,263 @@ abstract class _Error implements CourtUpdateState {
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ErrorImplCopyWith<_$ErrorImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$LoadedImplCopyWith<$Res> {
+  factory _$$LoadedImplCopyWith(
+          _$LoadedImpl value, $Res Function(_$LoadedImpl) then) =
+      __$$LoadedImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call(
+      {List<CourtUpdateRequest> requests,
+      CourtUpdateRequest? selectedRequest,
+      Court? selectedCourt,
+      ApiError? courtLoadError,
+      bool isCourtLoading});
+
+  $CourtUpdateRequestCopyWith<$Res>? get selectedRequest;
+}
+
+/// @nodoc
+class __$$LoadedImplCopyWithImpl<$Res>
+    extends _$CourtUpdateStateCopyWithImpl<$Res, _$LoadedImpl>
+    implements _$$LoadedImplCopyWith<$Res> {
+  __$$LoadedImplCopyWithImpl(
+      _$LoadedImpl _value, $Res Function(_$LoadedImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of CourtUpdateState
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? requests = null,
+    Object? selectedRequest = freezed,
+    Object? selectedCourt = freezed,
+    Object? courtLoadError = freezed,
+    Object? isCourtLoading = null,
+  }) {
+    return _then(_$LoadedImpl(
+      requests: null == requests
+          ? _value._requests
+          : requests // ignore: cast_nullable_to_non_nullable
+              as List<CourtUpdateRequest>,
+      selectedRequest: freezed == selectedRequest
+          ? _value.selectedRequest
+          : selectedRequest // ignore: cast_nullable_to_non_nullable
+              as CourtUpdateRequest?,
+      selectedCourt: freezed == selectedCourt
+          ? _value.selectedCourt
+          : selectedCourt // ignore: cast_nullable_to_non_nullable
+              as Court?,
+      courtLoadError: freezed == courtLoadError
+          ? _value.courtLoadError
+          : courtLoadError // ignore: cast_nullable_to_non_nullable
+              as ApiError?,
+      isCourtLoading: null == isCourtLoading
+          ? _value.isCourtLoading
+          : isCourtLoading // ignore: cast_nullable_to_non_nullable
+              as bool,
+    ));
+  }
+
+  /// Create a copy of CourtUpdateState
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $CourtUpdateRequestCopyWith<$Res>? get selectedRequest {
+    if (_value.selectedRequest == null) {
+      return null;
+    }
+
+    return $CourtUpdateRequestCopyWith<$Res>(_value.selectedRequest!, (value) {
+      return _then(_value.copyWith(selectedRequest: value));
+    });
+  }
+}
+
+/// @nodoc
+
+class _$LoadedImpl implements _Loaded {
+  const _$LoadedImpl(
+      {required final List<CourtUpdateRequest> requests,
+      this.selectedRequest,
+      this.selectedCourt,
+      this.courtLoadError,
+      this.isCourtLoading = false})
+      : _requests = requests;
+
+  final List<CourtUpdateRequest> _requests;
+  @override
+  List<CourtUpdateRequest> get requests {
+    if (_requests is EqualUnmodifiableListView) return _requests;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_requests);
+  }
+
+  @override
+  final CourtUpdateRequest? selectedRequest;
+  @override
+  final Court? selectedCourt;
+  @override
+  final ApiError? courtLoadError;
+  @override
+  @JsonKey()
+  final bool isCourtLoading;
+
+  @override
+  String toString() {
+    return 'CourtUpdateState.loaded(requests: $requests, selectedRequest: $selectedRequest, selectedCourt: $selectedCourt, courtLoadError: $courtLoadError, isCourtLoading: $isCourtLoading)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$LoadedImpl &&
+            const DeepCollectionEquality().equals(other._requests, _requests) &&
+            (identical(other.selectedRequest, selectedRequest) ||
+                other.selectedRequest == selectedRequest) &&
+            (identical(other.selectedCourt, selectedCourt) ||
+                other.selectedCourt == selectedCourt) &&
+            (identical(other.courtLoadError, courtLoadError) ||
+                other.courtLoadError == courtLoadError) &&
+            (identical(other.isCourtLoading, isCourtLoading) ||
+                other.isCourtLoading == isCourtLoading));
+  }
+
+  @override
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(_requests),
+      selectedRequest,
+      selectedCourt,
+      courtLoadError,
+      isCourtLoading);
+
+  /// Create a copy of CourtUpdateState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$LoadedImplCopyWith<_$LoadedImpl> get copyWith =>
+      __$$LoadedImplCopyWithImpl<_$LoadedImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function(String message) error,
+    required TResult Function(
+            List<CourtUpdateRequest> requests,
+            CourtUpdateRequest? selectedRequest,
+            Court? selectedCourt,
+            ApiError? courtLoadError,
+            bool isCourtLoading)
+        loaded,
+  }) {
+    return loaded(requests, selectedRequest, selectedCourt, courtLoadError,
+        isCourtLoading);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loading,
+    TResult? Function(String message)? error,
+    TResult? Function(
+            List<CourtUpdateRequest> requests,
+            CourtUpdateRequest? selectedRequest,
+            Court? selectedCourt,
+            ApiError? courtLoadError,
+            bool isCourtLoading)?
+        loaded,
+  }) {
+    return loaded?.call(requests, selectedRequest, selectedCourt,
+        courtLoadError, isCourtLoading);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function(String message)? error,
+    TResult Function(
+            List<CourtUpdateRequest> requests,
+            CourtUpdateRequest? selectedRequest,
+            Court? selectedCourt,
+            ApiError? courtLoadError,
+            bool isCourtLoading)?
+        loaded,
+    required TResult orElse(),
+  }) {
+    if (loaded != null) {
+      return loaded(requests, selectedRequest, selectedCourt, courtLoadError,
+          isCourtLoading);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(_Loading value) loading,
+    required TResult Function(_Error value) error,
+    required TResult Function(_Loaded value) loaded,
+  }) {
+    return loaded(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(_Loading value)? loading,
+    TResult? Function(_Error value)? error,
+    TResult? Function(_Loaded value)? loaded,
+  }) {
+    return loaded?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(_Loading value)? loading,
+    TResult Function(_Error value)? error,
+    TResult Function(_Loaded value)? loaded,
+    required TResult orElse(),
+  }) {
+    if (loaded != null) {
+      return loaded(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _Loaded implements CourtUpdateState {
+  const factory _Loaded(
+      {required final List<CourtUpdateRequest> requests,
+      final CourtUpdateRequest? selectedRequest,
+      final Court? selectedCourt,
+      final ApiError? courtLoadError,
+      final bool isCourtLoading}) = _$LoadedImpl;
+
+  List<CourtUpdateRequest> get requests;
+  CourtUpdateRequest? get selectedRequest;
+  Court? get selectedCourt;
+  ApiError? get courtLoadError;
+  bool get isCourtLoading;
+
+  /// Create a copy of CourtUpdateState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$LoadedImplCopyWith<_$LoadedImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

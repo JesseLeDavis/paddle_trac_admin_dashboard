@@ -1,3 +1,5 @@
+// ignore_for_file: use_build_context_synchronously
+
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:intl/intl.dart';
@@ -38,6 +40,7 @@ class OrdersView extends StatelessWidget {
         textAlign: TextAlign.center,
       ),
     );
+    // ignore: unused_local_variable
     final printOneSnackBar = SnackBar(
       backgroundColor: ColorThemes.courtGreen,
       content: Text(
@@ -258,7 +261,7 @@ class OrdersView extends StatelessWidget {
                                     DataTable(
                                       dividerThickness: 1,
                                       columnSpacing: 30,
-                                      dataRowHeight: 130,
+                                      dataRowMinHeight: 130,
                                       headingRowHeight: 150,
                                       columns: [
                                         DataColumn(

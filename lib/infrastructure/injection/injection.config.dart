@@ -85,8 +85,10 @@ extension GetItInjectableX on _i174.GetIt {
       instanceName: 'AdminCourtUpdateRequestService',
     );
     gh.factory<_i284.CourtUpdateCubit>(() => _i284.CourtUpdateCubit(
-        gh<_i333.IAdminCourtUpdateRequestService>(
-            instanceName: 'AdminCourtUpdateRequestService')));
+          gh<_i333.IAdminCourtUpdateRequestService>(
+              instanceName: 'AdminCourtUpdateRequestService'),
+          gh<_i586.ICourtService>(instanceName: 'CourtService'),
+        ));
     gh.factory<_i908.OrdersPageCubit>(() => _i908.OrdersPageCubit(
         gh<_i624.IOrderService>(instanceName: 'OrderService')));
     return this;

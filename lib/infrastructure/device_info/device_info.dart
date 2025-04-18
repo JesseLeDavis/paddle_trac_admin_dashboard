@@ -109,8 +109,8 @@ abstract class DeviceInfo {
   static Future<void> setFullScreen() =>
       SystemChrome.setEnabledSystemUIMode(SystemUiMode.edgeToEdge);
 
-  static bool get isKeyboardOpen =>
-      WidgetsBinding.instance.window.viewInsets.bottom != 0;
+  // static bool get isKeyboardOpen =>
+  //     WidgetsBinding.instance.window.viewInsets.bottom != 0;
 }
 
 abstract class _DeviceData {
@@ -166,6 +166,7 @@ class _WebData implements _DeviceData {
   String get os => _data.vendor ?? 'web';
 
   @override
+  // ignore: deprecated_member_use
   String get device => describeEnum(_data.browserName);
 }
 

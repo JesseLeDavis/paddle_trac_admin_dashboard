@@ -85,6 +85,7 @@ class OrdersPageCubit extends Cubit<OrderPageState> {
             o.productName,
           ]);
 
+          // ignore: unused_local_variable
           final emailResult = await _orderService.sendOrderShippedEmail(
             orderDate: o.orderDate,
             orderNumber: o.orderNumber!,
@@ -99,7 +100,6 @@ class OrdersPageCubit extends Cubit<OrderPageState> {
             orderEmail: o.customerEmail!,
           );
         }
-        
 
         final csvFile = const ListToCsvConverter().convert(rowsAsListOfValues);
 
